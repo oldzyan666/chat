@@ -12,9 +12,13 @@
 
 2.根目录下打开终端，输入php think queue:listen --queue chat
 
+启动这句命令可能会报错，得在输入一条，ln -s /usr/local/php/bin/php /usr/bin
+
+网址　https://blog.csdn.net/weixin_42415136/article/details/80622095
+
 需要配置一个本地的虚拟域名，比如：www.xy.com
 
-一　同时在线
+## 同时在线
 
 在谷歌浏览器打开，www.xy.com/index/index/index
 
@@ -22,7 +26,7 @@
 
 刷新火狐浏览器，消息马上发送到谷歌浏览器。
 
-原理
+## 原理
 
 1.谷歌浏览器 uid = 1　火狐浏览器 uid = 2　作为两个客户端，分别有自己对应的uid,通过getwaywork在分别生成各自的client_id.
 
@@ -35,6 +39,14 @@ $redis->get('socket',sdata).
 4.$aid = $redis->get('socket')[$tid];  $aid为　发给对方的client_id.
 
 5.Gateway::sendToClient($aid,json_encode(array('msg'=>$msg))); 发送过去
+
+## 没有同时在线
+
+在谷歌浏览器打开，www.xy.com/index/index/index
+
+火狐浏览器打开，www.xy.com/index/index/index2
+
+刷新火狐浏览器，消息马上发送到谷歌浏览器。
 
 
 
