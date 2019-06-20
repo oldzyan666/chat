@@ -42,11 +42,26 @@ $redis->get('socket',sdata).
 
 ## 没有同时在线
 
-在谷歌浏览器打开，www.xy.com/index/index/index
+1.先启动
 
-火狐浏览器打开，www.xy.com/index/index/index2
+2.火狐浏览器打开，www.xy.com/index/index/index，
+
+$.ajax({
+        url:'/message/index/chat',
+        method:'POST',
+        data:{
+            tid:1,
+            uid:2,
+            data:'你好'
+        })
+
+在谷歌浏览器打开，www.xy.com/index/index/index2
 
 刷新火狐浏览器，消息马上发送到谷歌浏览器。
+
+## 原理
+
+
 
 
 
