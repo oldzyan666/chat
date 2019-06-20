@@ -26,7 +26,7 @@
 
 刷新火狐浏览器，消息马上发送到谷歌浏览器。
 
-## 原理
+## 步骤
 
 1.谷歌浏览器 uid = 1　火狐浏览器 uid = 2　作为两个客户端，分别有自己对应的uid,通过getwaywork在分别生成各自的client_id.
 
@@ -44,7 +44,7 @@ $redis->get('socket',sdata).
 
 1.先启动
 
-2.火狐浏览器打开，www.xy.com/index/index/index，
+2.火狐浏览器打开，www.xy.com/index/index/index，f12发送下面消息，目前谷歌浏览器未打开，相当于接受消息的那一方未在线
 
 $.ajax({
         url:'/message/index/chat',
@@ -55,11 +55,11 @@ $.ajax({
             data:'你好'
         })
 
-在谷歌浏览器打开，www.xy.com/index/index/index2
+3.在谷歌浏览器打开，www.xy.com/index/index/index2，　需要等个18秒左右，成功的话，消息就会弹出来
 
-刷新火狐浏览器，消息马上发送到谷歌浏览器。
+## 步骤
 
-## 原理
+1.
 
 
 
